@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">启蜇单词</string>
+    <string name="home">首页</string>
+    <string name="read">阅读</string>
+    <string name="my">我的</string>
+    <string name="list">单词本</string>
+    <string name="today">今日\n单词\n0/20</string>
+    <string name="plan">计划单词\n0/2000</string>
+    <string name="already">您已经坚持\n0天</string>
+    <string name="start">开始背单词</string>
+    <string name="search">请输入单词或中文</string>
+    <string name="present">出品人：启蜇项目组</string>
+</resources>

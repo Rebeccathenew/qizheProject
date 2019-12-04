@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <!--实现跳转到我的页面-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/mToolBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/background1"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            android:minHeight="?attr/actionBarSize"-->
+<!--            app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar">-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_drawer"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+
+            app:headerLayout="@layout/menu_header"
+            app:menu="@menu/newmenu">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </LinearLayout>
+

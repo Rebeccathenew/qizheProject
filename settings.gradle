@@ -1,0 +1,2 @@
+include ':app', ':sample', ':library', ':tess-two'
+rootProject.name='MyProject'

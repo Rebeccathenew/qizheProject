@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!--底部导航栏设计
+        因为每一个tab的样式都是相同的，所以所有的格式都设置在style文件里
+        将导航栏上面的部分全部写成fragment方便通信
+    -->
+    <FrameLayout
+        android:id="@+id/fragment_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_linear">
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_linear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/main_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_home"
+            style="@style/TabLinear"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/TabImageStyle"
+                android:src="@drawable/home_bg" />
+
+            <TextView
+                style="@style/TabTextStyle"
+                android:text="@string/home"
+                android:textColor="@drawable/text_color_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_read"
+            style="@style/TabLinear"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear_home"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/TabImageStyle"
+                android:src="@drawable/read_bg"></ImageView>
+
+            <TextView
+                style="@style/TabTextStyle"
+                android:text="@string/read"
+                android:textColor="@drawable/text_color_back"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_list"
+            style="@style/TabLinear"
+
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear_read"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/TabImageStyle"
+                android:layout_height="22dp"
+                android:src="@drawable/word_list_bg"></ImageView>
+
+            <TextView
+                style="@style/TabTextStyle"
+                android:text="@string/list"
+                android:textColor="@drawable/text_color_back"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_user"
+            style="@style/TabLinear"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/TabImageStyle"
+                android:src="@drawable/user_bg"></ImageView>
+
+            <TextView
+                style="@style/TabTextStyle"
+                android:text="@string/my"
+                android:textColor="@drawable/text_color_back"></TextView>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
